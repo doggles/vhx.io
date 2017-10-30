@@ -51,6 +51,13 @@ h1 {
 	text-shadow: 1px 3px green, -2px -3px red;
 }
 
+@media (max-width: 736px) {
+	h1 {
+		font-size: 2em;
+		filter: blur(2px);
+	}
+}
+
 .vhs-message span {
 	opacity: 0;
 	animation: blink 1s linear infinite;
