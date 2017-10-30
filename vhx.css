@@ -46,7 +46,7 @@ h1 {
 @media (max-width: 736px) {
 	h1 {
 		font-size: 1.5em;
-		filter: blur(1px);
+		filter: blur(1.5px);
 	}
 
 	.vhs-message {
