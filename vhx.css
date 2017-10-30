@@ -26,7 +26,7 @@ body:after {
 
 .vhs-message {
 	animation: track 5ms infinite;
-   position: relative;
+  position: relative;
 	margin: 4em;
 }
 
@@ -46,12 +46,12 @@ h1 {
 }
 
 .vhs-message header {
-  	animation: blur 30ms infinite, flick 50ms infinite, jump 50ms infinite;
+  animation: blur 30ms infinite, flick 50ms infinite, jump 50ms infinite;
 }
 @keyframes blur {
-  0%  { filter: blur(1px); opacity:0.8;}
+  0%  { filter: blur(1px); opacity:.8; }
   50% { filter: blur(1px); opacity:1; }
-  100%{ filter: blur(1px); opacity:0.8; }
+  100%{ filter: blur(1px); opacity:.8; }
 }
 @keyframes flick {
   50% { left:2px; }
@@ -88,67 +88,68 @@ h1 {
 	  opacity:1;
 	  top:0;
 	  left:0;
-	  transform:scale(1, 1);
-		transform:skew(0, 0);
+	  transform:scale(1,1);
+		transform:skew(0,0);
 	}
 }
 
-//Lines
+/* Lines */
 .screen-bottom{
 	position: fixed;
 	bottom: 0;
 	width: 100%;
 }
 
-.line{
+.line {
 	width: 100%;
 	height: 3px;
 	position: relative;
-	animation: 	appear 1s infinite,
-					flick 1s infinite,
-					big-jump 5ms infinite;
-	.white{
-		background: white;
-		position: relative;
-		top:0;
-		left: 0;
-		height: 4px;
-	}
-	.red{
-		background: red;
-		position: relative;
-		top:0;
-		left: 0;
-		height: 1px;
-	}
-	.green{
-		background: green;
-		position: relative;
-		top:0;
-		left: 0;
-		height: 1px;
-	}
+	animation: appear 1s infinite, flick 1s infinite, big-jump 5ms infinite;
+}
+
+.white {
+	background: white;
+	position: relative;
+	top:0;
+	left: 0;
+	height: 4px;
+}
+
+.red {
+	background: red;
+	position: relative;
+	top:0;
+	left: 0;
+	height: 1px;
+}
+
+.green {
+	background: green;
+	position: relative;
+	top:0;
+	left: 0;
+	height: 1px;
 }
 
 @keyframes appear {
-  0%   { filter: blur(5px); opacity: 0.85;}
-  50% { filter: blur(3px); opacity: 0.85;}
-  100%{ filter: blur(4px); opacity: 0.85;}
+  0%   { filter: blur(5px); opacity:.85;}
+  50% { filter: blur(3px); opacity:.85;}
+  100%{ filter: blur(4px); opacity:.85;}
 }
 
 @keyframes big-jump {
 	0% { top:0; }
- 	10% { top: -100px; }
+ 	10% { top:-100px; }
 	12% { top:0; }
 	54% { top:0; }
-	55% { top: -300px; }
+	55% { top:-300px; }
 	56% { top:0; }
 	86% { top:0; }
-	87% { top: -600px; }
+	87% { top:-600px; }
 	88% { top:0; }
 }
 
 @keyframes blink {
-	from, 49.9% { opacity: 0; }
-  50%,to {opacity: 1; }
+	from, 49.9% { opacity:0; }
+  50%,to {opacity:1; }
 }
