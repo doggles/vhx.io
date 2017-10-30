@@ -9,14 +9,14 @@ body {
 	user-select: none;
 	height: 100%;
 	width: 100%;
-	position: absolute;
+	position: fixed;
 	margin: 0;
 	top: 0;
 }
 
 body:after {
  	box-shadow: inset 0 0 10em rgba(0,0,0,0.75);
-	position: absolute;
+	position: fixed;
 	overflow: hidden;
  	top: 0;
  	left: 0;
@@ -36,7 +36,8 @@ body:after {
 
 .vhs-message {
 	animation: track 5ms infinite;
-  position: relative;
+	position: fixed;
+	overflow: hidden;
 	margin: 4em;
 	width: 100%;
 	height: 100%;
