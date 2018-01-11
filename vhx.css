@@ -8,7 +8,6 @@ body {
 	font-size: 8vh;
 	font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: .3vh;
 	background: url('static.jpg') top left repeat-y, black;
 	background-attachment: fixed;
   background-size: 100% 18360px;
