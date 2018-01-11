@@ -6,13 +6,13 @@
 body {
 	font-family: 'VCR OSD', monospace;
 	font-size: 8vh;
-	font-weight: 800;
+  font-weight: 800;
+  letter-spacing: -1px;
   text-transform: uppercase;
 	background: url('static.jpg') top left repeat-y, black;
 	background-attachment: fixed;
   background-size: 100% 18360px;
 	overflow: hidden;
-	animation: background-loop 900ms infinite steps(1);
 	-o-user-select: none;
 	-moz-user-select: none;
 	-webkit-user-select: none;
@@ -20,9 +20,15 @@ body {
   top: 0;
   padding: 0;
   margin: 0;
+  animation: background-loop 900ms infinite steps(1);
 }
 
 .x {
+  overflow: hidden;
+	-o-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -32,7 +38,12 @@ body {
 }
 
 #t {
-  filter: blur(4px);
+  overflow: hidden;
+	-o-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+  filter: blur(3px);
 	text-shadow: 1px 3px green, -2px -3px red;
 }
 
@@ -43,7 +54,12 @@ body {
 }
 
 #w {
-  filter: blur(7px);
+  overflow: hidden;
+	-o-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+  filter: blur(5px);
 	text-shadow: 1px 2px green, -1px -2px red;
 }
 
