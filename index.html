@@ -10,53 +10,6 @@
 </head>
 <body scroll="no">
 <script>
-var c = document.getElementById('canv'),
-    $ = c.getContext('2d');
-    c.style.width = window.innerWidth + 'px';
-    c.style.height = window.innerHeight + 'px';
-
-window.addEventListener('resize', function(){
-    c.style.width = window.innerWidth + 'px';
-    c.style.height = window.innerHeight + 'px';
-}, false);
-
-sin = 0;
-
-function noise($) {
-    var w = $.canvas.width,
-        h = $.canvas.height,
-        id = $.getImageData(0, 0, w, h),
-        buffer32 = new Uint32Array(id.data.buffer),
-        len = buffer32.length,
-        i = 0,
-        pr = 456 * Math.random(),
-        prs = 716 * Math.random();
-
-    for(; i < len;) {
-      
-       //black, grey, and white
-       //buffer32[i++] = (((pr % 255)|0) << 24) | 0x110000;
-       
-       //Or colorful
-        buffer32[i++] = (((pr % 255)|0) << 24) | 0x770000 + (Math.random() * 16777216)|0;
-      
-        pr += prs * 2.5;
-    }
-
-    $.putImageData(id, 0, 0);
-    
-    // wave 
-    for(i = 0; i < w; i += 1.2) {
-        var x = i * Math.sin((i+(sin++))/200);
-        $.drawImage($.canvas, i,0, 1, h,  i, x, 1, h);
-    }
-}
-(function run() {
-    noise($);
-    window.requestAnimationFrame(run);
-})();
-</script>
-<script>
 // जावास्क्रिप्ट
 
 function dec(n) {
@@ -91,23 +44,11 @@ var x = setInterval(function() {
 	  clearInterval(x);
 	  document.getElementById('t').innerHTML = "XXXXXXXX";
   }
-
-  var wx = document.getElementById('w');
-
-  if (s % 23 == 0) {
-      wx.innerHTML = "W A K E  U P";
-  } else if (s % 28 == 0) {
-      wx.innerHTML = "T͒͂͏͔̭̮o͈̼̜̹͂̿́";
-  } else if (s > 1 && s <= 4) {
-      wx.innerHTML = "=f͎̣̰̼̦̗̬͇͛̒̌̅̐̐ͬ́͠ṙ̷͇̩̳̆̽ͬ͊̾ͧ͢͠o͎̤ͣ̑̊͑m̻͇͙̬̫͊̋́̚ ̪̫͚͇̬̗̈̆̉̉͗ͩ̓d͎̬̼ͥ́͡ę̃̍ͨ̂̉̎͜͏͇̦̭̥͇̱ǟ͈͍̩̯̮͔̿̑́ͭ̈́̀͘͟t̵͇͎̰̭̹̱̙̟̞̒̏̽ĥ̸̫̝͌̀͊́͡";
-  } else {
-      wx.innerHTML = "";
-  }
 }, 1000);
 </script>
 <div id="canv">
     <div class="x" id="w"></div>
-    <div class="x" id="t" data-block="&#9608;"></div>
+    <div class="x" id="t" data-text="fgs"></div>
 </div>
 </body>
 </html>
